@@ -119,7 +119,7 @@ function processPayment(method) {
 // Razorpay payment integration
 function initiateRazorpayPayment() {
     // Redirect to Razorpay payment link
-    window.location.href = 'https://rzp.io/rzp/YMdrlruO';
+    window.location.href = 'https://rzp.io/rzp/ukb7Tal';
 }
 
 // Deliver code
