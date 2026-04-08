@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - GG Mouse Pro</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <style>
+        .admin-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+        }
+        .admin-section {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        body.dark-mode .admin-section {
+            background-color: #2a2a2a;
+        }
+        .admin-section h2 {
+            margin-bottom: 1rem;
+            color: #007bff;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+        }
+        body.dark-mode .form-group input,
+        body.dark-mode .form-group select,
+        body.dark-mode .form-group textarea {
+            background-color: #1e1e1e;
+            border-color: #555;
+            color: #e0e0e0;
+        }
+        .btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-right: 0.5rem;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .btn-danger {
+            background-color: #dc3545;
+        }
+        .btn-danger:hover {
+            background-color: #c82333;
+        }
+        .code-list {
+            max-height: 300px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1rem;
+            background-color: #f8f9fa;
+        }
+        body.dark-mode .code-list {
+            background-color: #1e1e1e;
+            border-color: #555;
+        }
+        .code-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        body.dark-mode .code-item {
+            border-bottom-color: #444;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        .stat-card {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            border-radius: 5px;
+            text-align: center;
+        }
+        body.dark-mode .stat-card {
+            background-color: #1e1e1e;
+        }
+        .stat-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Admin Panel - GG Mouse Pro</h1>
+            </div>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links">
+                <a href="index.html">Back to Site</a>
+                <button id="dark-mode-toggle">🌙</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="admin-container">
+        <section class="admin-section">
+            <h2>Dashboard</h2>
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-value" id="total-sales">0</div>
+                    <div>Total Sales</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="total-revenue">₹0</div>
+                    <div>Total Revenue</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="mouse-codes-left">0</div>
+                    <div>GG Mouse Pro Codes Left</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="game-codes-left">0</div>
+                    <div>GG Game Space Codes Left</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="admin-section">
+            <h2>Add New Codes</h2>
+            <form id="add-code-form">
+                <div class="form-group">
+                    <label for="product-select">Product:</label>
+                    <select id="product-select" required>
+                        <option value="gg-mouse-pro">GG Mouse Pro</option>
+                        <option value="gg-game-space">GG Game Space</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="new-codes">Codes (one per line):</label>
+                    <textarea id="new-codes" rows="5" placeholder="Enter codes here, one per line" required></textarea>
+                </div>
+                <button type="submit" class="btn">Add Codes</button>
+            </form>
+        </section>
+
+        <section class="admin-section">
+            <h2>Available Codes</h2>
+            <h3>GG Mouse Pro</h3>
+            <div class="code-list" id="mouse-codes-list"></div>
+            <h3>GG Game Space</h3>
+            <div class="code-list" id="game-codes-list"></div>
+        </section>
+
+        <section class="admin-section">
+            <h2>Sales History</h2>
+            <div class="code-list" id="sales-history"></div>
+        </section>
+    </main>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>

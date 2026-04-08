@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Lifetime Premium Codes - GG Mouse Pro & GG Game Space</title>
+    <meta name="description" content="Purchase lifetime premium activation codes for GG Mouse Pro and GG Game Space at affordable prices. Secure payment and instant delivery.">
+    <meta name="keywords" content="GG Mouse Pro, GG Game Space, premium codes, lifetime activation, gaming tools">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>GG Mouse Pro</h1>
+            </div>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links">
+                <a href="#products">Products</a>
+                <a href="#free-codes">Free Codes</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">Contact</a>
+                <button id="dark-mode-toggle">🌙</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h2>Buy Lifetime Premium Codes</h2>
+                <p>Unlock premium features for GG Mouse Pro and GG Game Space with our lifetime activation codes.</p>
+                <a href="#products" class="cta-button">View Products</a>
+            </div>
+        </section>
+
+        <section id="products">
+            <h2>Our Products</h2>
+            <div class="products-grid">
+                <div class="product-card" data-product="gg-mouse-pro">
+                    <div class="product-image">
+                        <img src="images/gg-mouse-pro.png" alt="GG Mouse Pro" />
+                    </div>
+                    <h3>GG Mouse Pro Lifetime Code</h3>
+                    <ul class="features">
+                        <li>Lifetime access to premium features</li>
+                        <li>Advanced mouse customization</li>
+                        <li>Enhanced gaming performance</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <div class="pricing">
+                        <p>Base Price: ₹819</p>
+                        <p>CGST (11.05%): ₹90.50</p>
+                        <p>SGST (11.05%): ₹90.50</p>
+                        <p class="total">Total: ₹1000</p>
+                    </div>
+                    <button class="buy-button">Buy Now</button>
+                </div>
+                <div class="product-card" data-product="gg-game-space">
+                    <div class="product-image">
+                        <img src="images/gg-game-space.png" alt="GG Game Space" />
+                    </div>
+                    <h3>GG Game Space Lifetime Code</h3>
+                    <ul class="features">
+                        <li>Lifetime access to premium features</li>
+                        <li>Expanded game library</li>
+                        <li>Cloud save functionality</li>
+                        <li>Exclusive game content</li>
+                    </ul>
+                    <div class="pricing">
+                        <p>Base Price: ₹819</p>
+                        <p>CGST (11.05%): ₹90.50</p>
+                        <p>SGST (11.05%): ₹90.50</p>
+                        <p class="total">Total: ₹1000</p>
+                    </div>
+                    <button class="buy-button">Buy Now</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="free-codes">
+            <h2>Free Temporary Codes</h2>
+            <div class="free-codes-content">
+                <p>Free temporary premium codes are provided manually for a limited time.</p>
+                <p>Use the contact form below or message our support team to request a temporary code.</p>
+                <button id="request-free-code">Request Free Code</button>
+            </div>
+        </section>
+
+        <section id="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h3>How do I activate the premium code?</h3>
+                    <p>After purchase, you'll receive a unique activation code. Enter it in the app settings under the premium section.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is the code really lifetime?</h3>
+                    <p>Yes, once activated, the premium features are unlocked permanently for your account.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What payment methods are accepted?</h3>
+                    <p>We accept Razorpay for secure transactions.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I get a refund?</h3>
+                    <p>Refunds are available within 7 days if the code doesn't work. Contact support for assistance.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact & Support</h2>
+            <div class="contact-content">
+                <p>Need help? Reach out to our support team.</p>
+                <p>Email: sahil@ggmousepro.in</p>
+                <p>Phone: +91 99969 47080</p>
+                <form id="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 GG Mouse Pro. All rights reserved.</p>
+        <a href="#terms">Terms & Conditions</a>
+    </footer>
+
+    <!-- Payment Modal -->
+    <div id="payment-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Complete Payment</h2>
+            <div id="payment-details"></div>
+            <div class="payment-options">
+                <button class="payment-button" data-method="razorpay">Pay with Razorpay</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Code Delivery Modal -->
+    <div id="code-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Payment Successful!</h2>
+            <p>Your premium code:</p>
+            <div class="code-display">
+                <span id="premium-code"></span>
+                <button id="copy-code">Copy Code</button>
+            </div>
+            <p>Thank you for your purchase!</p>
+        </div>
+    </div>
+
+    <!-- Loading Animation -->
+    <div id="loading" class="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
